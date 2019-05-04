@@ -44,9 +44,10 @@ export default {
         color #ccc    
     .header-right
         width 1.24rem
+        padding 0 .1rem
         float right 
         text-align center
         .arrow-icon
-            margin-left -0.02rem
+            margin-left -.04rem
             font-size .24rem
 </style>
