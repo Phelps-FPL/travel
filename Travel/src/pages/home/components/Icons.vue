@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-        <swiper>
+        <swiper :options="swiperOption">
             <swiper-slide v-for="(page,index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
             <div class="icon-img">
@@ -29,9 +29,10 @@ export default {
                 {id:'0007',imgurl:'http://img1.qunarzz.com/piao/fusion/1803/a6/6d97515091789602.png',desc:'世界之窗'},
                 {id:'0008',imgurl:'http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png',desc:'玛雅水公园'},
                 {id:'0009',imgurl:'http://img1.qunarzz.com/piao/fusion/1803/b6/37560ece9c62b502.png',desc:'东部华侨城'},
-
-
-            ]
+                  ],
+            swiperOption:{
+                
+            }
         }
     },
     computed:{
