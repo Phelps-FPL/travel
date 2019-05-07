@@ -5,14 +5,14 @@
                 <div class="title border-topottom">当前城市</div>
                 <div class="button-list">
                     <div class="button-wrapper" >
-                        <div class="button">深圳</div>
+                        <div class="button">{{this.currentCity}}</div>
                     </div>
                 </div>
             </div>
             <div class="area">
                 <div class="title border-topbottom">热门城市</div>
                 <div class="button-list">
-                    <div class="button-wrapper" v-for="item of hot" :key='item.id'>
+                    <div class="button-wrapper" v-for="item of hot" :key='item.id' @click = 'handleCityClick(item.name)'>
                         <div class="button">{{item.name}}</div>
                     </div>
 
@@ -22,7 +22,7 @@
             <div class="area" v-for="(item,key) of cities" :key='key' :ref="key">
                 <div class="title border-topbottom">{{key}}</div>
                 <div class="item-list">
-                    <div class="item border-bottom" v-for="inneritem of item" :key="inneritem.id">{{inneritem.name}}</div>
+                    <div class="item border-bottom" v-for="inneritem of item" :key="inneritem.id" @click = 'handleCityClick(inneritem.name)'>{{inneritem.name}}</div>
                 </div>
             </div>
 
@@ -31,6 +31,7 @@
 </template>
 <script>
 import BScroll from 'better-scroll'
+import {mapState, mapMutations} from 'vuex'
 export default {
     name: 'CityList',
     mounted() {
@@ -41,6 +42,11 @@ export default {
         cities: Object,
         letter: String
     },
+    computed: {
+        ...mapState({
+            currentCity:'city'
+        })
+    },
     watch: {
         letter() {
             if(this.letter){
@@ -49,6 +55,13 @@ export default {
             }
         }
     },
+    methods: {
+        handleCityClick (city) {      
+            this.changeCity(city)
+            this.$router.push('/')
+        },
+        ...mapMutations(['changeCity'])
+    }
 }
 </script>
 
