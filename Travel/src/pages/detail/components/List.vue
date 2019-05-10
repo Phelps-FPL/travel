@@ -5,6 +5,7 @@
                 <span class="item-title-icon"></span>
                     {{item.title}}
             </div>
+            <!-- 递归组件，自己调用自己 -->
             <div class="item-children" v-if="item.children">
                 <detail-list :list = 'item.children'></detail-list>    
             </div> 
