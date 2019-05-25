@@ -1,7 +1,7 @@
 # travel
 
 #### 介绍
-vue去哪儿实战小项目(本实战来自于慕课网vue2.5实战去哪儿教程)
+vue去哪儿实战小项目(本实战来自于vue2.5实战去哪儿教程)
 
 使用了stylus语法
 创建主页的组件，
@@ -37,3 +37,8 @@ keep-alive优化网页性能，使同样的数据ajax来回请求只请求一次
 ![递归组件](https://images.gitee.com/uploads/images/2019/0512/101339_6fcfefdb_4986174.png "在这里输入图片标题")
 
 8.真机调试，bug 修改，页面优化
+
+首页
+![首页展示](https://images.gitee.com/uploads/images/2019/0512/090949_5f766175_4986174.jpeg "WechatIMG1141.jpeg")
+
+![城市搜索页](https://images.gitee.com/uploads/images/2019/0512/091009_e34caf0e_4986174.jpeg "WechatIMG1142.jpeg")
