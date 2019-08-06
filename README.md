@@ -7,8 +7,7 @@ vue去哪儿实战小项目
 使用了stylus语法
 
 ### 手机页面展示
-首页
-![image](https://gitee.com/fpl95/travel/blob/master/upload%20images/WechatIMG1141.jpeg)
+
 =======
 vue去哪儿实战小项目(本实战来自于慕课网vue2.5实战去哪儿教程)
 
